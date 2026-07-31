@@ -83,7 +83,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ===== 1. SCROLL PROGRESS BAR =====
 // ================================================================
 const progressBar = document.getElementById('scroll-progress');
-` const rail = document.querySelector('.rail');
+const rail = document.querySelector('.rail');
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
@@ -211,12 +211,12 @@ const departmentData = [
       { name: "Innerwear & Nightwear", items: ["Vests", "Briefs", "Pyjamas", "Nighties"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=800&q=80',
-      'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80',
-      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80',
-      'https://images.unsplash.com/photo-1608236415050-1b73c4c0a8ec?w=800&q=80',
-      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80',
-      'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80'
+      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80', // General clothing rack
+      'https://images.unsplash.com/photo-1610189334133-1b5890328487?w=800&q=80', // Sarees
+      'https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80', // Men's shirts
+      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80', // Kids' clothing
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80', // Men's traditional wear
+      'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=800&q=80'  // Folded jeans
     ]
   },
   {
@@ -230,12 +230,12 @@ const departmentData = [
       { name: "Formal Footwear", items: ["Dress Shoes", "Loafers", "Heels"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1608236415050-1b73c4c0a8ec?w=800&q=80',
-      'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&q=80',
-      'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&q=80',
-      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80',
-      'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80',
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80'
+      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80', // Women's heels
+      'https://images.unsplash.com/photo-1605346533142-71b3b3d73c52?w=800&q=80', // Men's formal shoes
+      'https://images.unsplash.com/photo-1562183241-b937e95585b6?w=800&q=80', // Sandals
+      'https://images.unsplash.com/photo-1525966222134-fcfa99b83775?w=800&q=80', // Casual sneakers
+      'https://images.unsplash.com/photo-1604275982132-629154a05953?w=800&q=80', // Slippers/Flip-flops
+      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80'  // Sports shoe
     ]
   },
   {
@@ -249,12 +249,12 @@ const departmentData = [
       { name: "Cooking Essentials", items: ["Cooking Oil", "Ghee", "Salt", "Sugar", "Jaggery"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80',
-      'https://images.unsplash.com/photo-1590779033100-9f8a5991e858?w=800&q=80',
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80',
-      'https://images.unsplash.com/photo-1615485290382-441e4b0497b5?w=800&q=80',
-      'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
-      'https://images.unsplash.com/photo-1511317559916-56d5ddb62563?w=800&q=80'
+      'https://images.unsplash.com/photo-1606859191214-a8a24b8f5aa6?w=800&q=80', // Spices
+      'https://images.unsplash.com/photo-1584306670957-acf935f5033c?w=800&q=80', // Vegetables/Produce
+      'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80', // Grocery aisle
+      'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', // Packaged goods
+      'https://images.unsplash.com/photo-1550258987-3a65b63ba533?w=800&q=80', // Grains/Rice
+      'https://images.unsplash.com/photo-1528825871115-3581a5387919?w=800&q=80'  // Fruits
     ]
   },
   {
@@ -268,12 +268,12 @@ const departmentData = [
       { name: "Office Supplies", items: ["Files", "Folders", "Staplers", "Calculators"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1456735190827-d1262f71b8f3?w=800&q=80',
-      'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800&q=80',
-      'https://images.unsplash.com/photo-1596003906949-67221c37965c?w=800&q=80',
-      'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=800&q=80',
-      'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80',
-      'https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=800&q=80'
+      'https://images.unsplash.com/photo-1520412099554-642d85a1b319?w=800&q=80', // Pens and pencils
+      'https://images.unsplash.com/photo-1456735190827-d1262f71b8f3?w=800&q=80', // Notebooks
+      'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=800&q=80', // Art supplies
+      'https://images.unsplash.com/photo-1516962126624-3e97e7071a82?w=800&q=80', // Office supplies
+      'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80', // Craft paper
+      'https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=800&q=80'  // Desk setup
     ]
   },
   {
@@ -287,11 +287,11 @@ const departmentData = [
       { name: "Passport Photos", items: ["Instant Passport Photos", "Visa Photos"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80',
-      'https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80',
-      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80',
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80',
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80'
+      'https://images.unsplash.com/photo-1555991405-94f78398c277?w=800&q=80', // Printer
+      'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80', // Person using printer
+      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80', // Office documents
+      'https://images.unsplash.com/photo-1521993981534-c8c36069104a?w=800&q=80', // Lamination machine
+      'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80'  // Stack of papers
     ]
   },
   {
@@ -305,12 +305,12 @@ const departmentData = [
       { name: "Decorative Items", items: ["Keychains", "Small Figurines", "Photo Frames"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1601121141255-51e0b0b1c4c1?w=800&q=80',
-      'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80',
-      'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&q=80',
-      'https://images.unsplash.com/photo-1604772659841-a1612db7008f?w=800&q=80',
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&q=80',
-      'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=800&q=80'
+      'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80', // Cosmetics
+      'https://images.unsplash.com/photo-1599948124513-d19a78718a12?w=800&q=80', // Bangles/Jewellery
+      'https://images.unsplash.com/photo-1588796124469-275a2a5042a9?w=800&q=80', // Handbags
+      'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&q=80', // Perfumes
+      'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=800&q=80', // Accessories display
+      'https://images.unsplash.com/photo-1601121141255-51e0b0b1c4c1?w=800&q=80'  // Nail polish
     ]
   },
   {
@@ -324,12 +324,12 @@ const departmentData = [
       { name: "Festive Hampers", items: ["Diwali Hampers", "Christmas Baskets", "Custom Hampers"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1513207565459-d7f36bfa7d23?w=800&q=80',
-      'https://images.unsplash.com/photo-1549465220-1a8b9238cd98?w=800&q=80',
-      'https://images.unsplash.com/photo-1558370781-d6196949e317?w=800&q=80',
-      'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=800&q=80',
-      'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80',
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80'
+      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80', // Wrapped gifts
+      'https://images.unsplash.com/photo-1513207565459-d7f36bfa7d23?w=800&q=80', // Gift wrapping station
+      'https://images.unsplash.com/photo-1572095689026-f6385433c2a9?w=800&q=80', // Greeting cards
+      'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80', // Gift boxes
+      'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=800&q=80', // Person holding gift
+      'https://images.unsplash.com/photo-1549465220-1a8b9238cd98?w=800&q=80'  // Bows and ribbons
     ]
   },
   {
@@ -343,12 +343,12 @@ const departmentData = [
       { name: "Bottled Water", items: ["Mineral Water", "Sparkling Water", "Flavoured Water"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=800&q=80',
-      'https://images.unsplash.com/photo-1581006852262-4307d6283b9a?w=800&q=80',
-      'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800&q=80',
-      'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80',
-      'https://images.unsplash.com/photo-1551029506-0807df4e2031?w=800&q=80',
-      'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80'
+      'https://images.unsplash.com/photo-1581006852262-4307d6283b9a?w=800&q=80', // Fridge with drinks
+      'https://images.unsplash.com/photo-1551029506-0807df4e2031?w=800&q=80', // Milkshakes
+      'https://images.unsplash.com/photo-1553531889-56cc480ac5cb?w=800&q=80', // Juices
+      'https://images.unsplash.com/photo-1575596511241-b021b80a4933?w=800&q=80', // Soft drink cans
+      'https://images.unsplash.com/photo-1543253687-c931c8e01820?w=800&q=80', // Water bottles
+      'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80'  // Ice cream
     ]
   },
   {
@@ -362,18 +362,19 @@ const departmentData = [
       { name: "Batteries & Bulbs", items: ["AA/AAA Batteries", "LED Bulbs", "Tube Lights"] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80',
-      'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80',
-      'https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
-      'https://images.unsplash.com/photo-1563299796-1750ed7b0074?w=800&q=80',
-      'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80'
+      'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80', // Cleaning supplies
+      'https://images.unsplash.com/photo-1584776710758-a7654078a963?w=800&q=80', // Soaps
+      'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80', // Toiletries
+      'https://images.unsplash.com/photo-1598611138623-02e2a858915a?w=800&q=80', // Light bulbs
+      'https://images.unsplash.com/photo-1627906232539-4153582a1b94?w=800&q=80', // Detergent
+      'https://images.unsplash.com/photo-1563299796-1750ed7b0074?w=800&q=80'  // Candles
     ]
   }
 ];
 
 const categoriesSection = document.getElementById('categories');
 const departmentDetailSection = document.getElementById('department-detail');
+const emptyStateWrapper = document.getElementById('department-empty-state-wrapper');
 const departmentDetailContent = document.getElementById('department-detail-content');
 
 document.querySelectorAll('.tag[data-department-id]').forEach(tag => {
@@ -391,6 +392,23 @@ document.querySelectorAll('.tag[data-department-id]').forEach(tag => {
 });
 
 
+// Helper to get banner color class based on department tag color
+function getDepartmentBannerClass(departmentId) {
+  // Map department ids to their tag color
+  const colorMap = {
+    'clothing': 'banner--marigold',
+    'footwear': 'banner--red',
+    'grocery': 'banner--sage',
+    'stationery': 'banner--teal',
+    'xerox-printing': 'banner--plum',
+    'fancy-items': 'banner--marigold',
+    'gifts': 'banner--red',
+    'cool-drinks': 'banner--sage',
+    'daily-home-needs': 'banner--teal'
+  };
+  return colorMap[departmentId] || 'banner--marigold';
+}
+
 function showDepartmentDetail(departmentId) {
   const department = departmentData.find(d => d.id === departmentId);
   if (!department) {
@@ -398,20 +416,74 @@ function showDepartmentDetail(departmentId) {
     return;
   }
 
+  const bannerClass = getDepartmentBannerClass(departmentId);
+
   let html = `
+    <div class="department-breadcrumb">
+      <span>Departments</span>
+      <span>/</span>
+      <span class="breadcrumb-current">${department.name}</span>
+    </div>
+
+    <!-- Themed Banner -->
+    <div class="department-banner ${bannerClass}">
+      <p class="eyebrow">Department</p>
+      <h2>${department.name}</h2>
+      <p>${department.description}</p>
+    </div>
+
     <button id="back-to-categories" class="btn btn-ghost department-back-btn">&larr; Back to Categories</button>
-    <div class="department-detail-grid">
-      <div class="department-detail-left">
-        <div class="department-detail-header">
-          <p class="eyebrow">Department</p>
-          <h2>${department.name}</h2>
-          <p class="department-description">${department.description}</p>
-        </div>
   `;
 
-  // Subcategories
+  // New: Create a grid to hold the gallery and subcategories
+  html += `<div class="department-detail-grid">`;
+
+  // Column 1: Slideshow Gallery
+  if (department.images && department.images.length > 0) {
+    const captions = [
+      'Our wide selection', 'Quality you can trust', 'Fresh & ready for you',
+      'Browse in comfort', 'Always well-stocked', 'Come explore today'
+    ];
+
+    html += `
+      <div class="department-images">
+        <div class="slideshow-container" id="slideshow-container">
+          <div class="slideshow-track" id="slideshow-track">
+            ${department.images.map((imgSrc, i) => `
+              <div class="slideshow-slide ${i === 0 ? 'is-active' : ''}" data-index="${i}">
+                <img src="${imgSrc}" alt="${department.name} — image ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}" class="slideshow-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%23EDF2F7%22 width=%22800%22 height=%22600%22/%3E%3Ctext x=%22400%22 y=%22310%22 text-anchor=%22middle%22 fill=%22%234A5568%22 font-family=%22sans-serif%22 font-size=%2220%22%3E${department.name}%3C/text%3E%3Ctext x=%22400%22 y=%22340%22 text-anchor=%22middle%22 fill=%22%234A5568%22 font-family=%22sans-serif%22 font-size=%2214%22%3EImage ${i + 1}%3C/text%3E%3C/svg%3E';">
+                <div class="slideshow-caption">${captions[i % captions.length]}</div>
+              </div>
+            `).join('')}
+          </div>
+          <button class="slideshow-nav slideshow-nav--prev" id="slideshow-prev" aria-label="Previous image">&lsaquo;</button>
+          <button class="slideshow-nav slideshow-nav--next" id="slideshow-next" aria-label="Next image">&rsaquo;</button>
+
+          <div class="slideshow-dots" id="slideshow-dots">
+            ${department.images.map((_, i) => `
+              <button class="slideshow-dot ${i === 0 ? 'is-active' : ''}" data-slide="${i}" aria-label="Go to image ${i + 1}"></button>
+            `).join('')}
+          </div>
+          <div class="slideshow-counter" id="slideshow-counter">1 / ${department.images.length}</div>
+          <div class="slideshow-progress">
+            <div class="slideshow-progress-bar" id="slideshow-progress-bar"></div>
+          </div>
+          <div class="swipe-indicator" id="swipe-indicator">&#8592; &#8594;</div>
+        </div>
+        <div class="slideshow-thumbnails" id="slideshow-thumbnails">
+          ${department.images.map((imgSrc, i) => `
+            <div class="slideshow-thumb ${i === 0 ? 'is-active' : ''}" data-thumb-index="${i}">
+              <img src="${imgSrc}" alt="" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // Column 2: Subcategories
   if (department.subcategories && department.subcategories.length > 0) {
-    html += `<div class="department-detail-content-grid">`;
+    html += `<div class="department-detail-content-grid">`; // This is now a wrapper for the lists
     department.subcategories.forEach(subcat => {
       html += `
         <div class="department-subcategory">
@@ -425,45 +497,21 @@ function showDepartmentDetail(departmentId) {
     html += `</div>`; // Close department-detail-content-grid
   }
 
-  html += `</div>`; // Close department-detail-left
-
-  // === SLIDESHOW GALLERY ===
-  if (department.images && department.images.length > 0) {
-    html += `
-      <div class="department-detail-right">
-        <div class="department-images">
-          <h3>Gallery</h3>
-          <div class="slideshow-container" id="slideshow-container">
-            <div class="slideshow-track" id="slideshow-track">
-              ${department.images.map((imgSrc, i) => `
-                <div class="slideshow-slide ${i === 0 ? 'is-active' : ''}" data-index="${i}">
-                  <img src="${imgSrc}" alt="${department.name} — image ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}" class="slideshow-img">
-                </div>
-              `).join('')}
-            </div>
-
-            <button class="slideshow-nav slideshow-nav--prev" id="slideshow-prev" aria-label="Previous image">&lsaquo;</button>
-            <button class="slideshow-nav slideshow-nav--next" id="slideshow-next" aria-label="Next image">&rsaquo;</button>
-
-            <div class="slideshow-dots" id="slideshow-dots">
-              ${department.images.map((_, i) => `
-                <button class="slideshow-dot ${i === 0 ? 'is-active' : ''}" data-slide="${i}" aria-label="Go to image ${i + 1}"></button>
-              `).join('')}
-            </div>
-
-            <div class="slideshow-counter" id="slideshow-counter">1 / ${department.images.length}</div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
   html += `</div>`; // Close department-detail-grid
+
   departmentDetailContent.innerHTML = html;
 
   // Hide categories, show detail
-  categoriesSection.classList.add('is-hidden');
+  categoriesSection.style.opacity = '0';
+  categoriesSection.style.visibility = 'hidden';
+  emptyStateWrapper.style.display = 'none'; // Hide the empty state wrapper
   departmentDetailSection.classList.add('is-active');
+
+  // After the transition, set display to none to remove it from the layout
+  setTimeout(() => {
+    categoriesSection.style.display = 'none';
+
+  }, 400); // Match the transition duration in CSS
 
   // Add event listener to the dynamically created back button
   document.getElementById('back-to-categories').addEventListener('click', hideDepartmentDetail);
@@ -471,9 +519,21 @@ function showDepartmentDetail(departmentId) {
   // Initialize slideshow
   initSlideshow(department.images);
 
+  // Show swipe indicator briefly on first visit (only if never shown before)
+  if (!sessionStorage.getItem('swipeHintShown')) {
+    const swipeEl = document.getElementById('swipe-indicator');
+    if (swipeEl) {
+      swipeEl.classList.add('is-visible');
+      setTimeout(() => {
+        swipeEl.classList.remove('is-visible');
+      }, 2500);
+      sessionStorage.setItem('swipeHintShown', 'true');
+    }
+  }
+
   // Scroll to top of the detail section
   setTimeout(() => {
-    departmentDetailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.scrollTo({ top: departmentDetailSection.offsetTop - 80, behavior: 'smooth' });
   }, 100);
 }
 
@@ -483,12 +543,139 @@ function hideDepartmentDetail() {
     clearInterval(window._slideshowInterval);
     window._slideshowInterval = null;
   }
-  departmentDetailSection.classList.remove('is-active');
-  categoriesSection.classList.remove('is-hidden');
+  // Stop featured department interval
+  if (window._featuredDeptInterval) {
+    clearInterval(window._featuredDeptInterval);
+    window._featuredDeptInterval = null;
+  }
+
+  // Stop progress bar animation if it's running
+  if (window._progressInterval) {
+    cancelAnimationFrame(window._progressInterval);
+    window._progressInterval = null;
+  }
+
+  // Clear dynamic content
+  departmentDetailContent.innerHTML = '';
+
+  // Show categories section, hide department detail section
+  categoriesSection.style.display = ''; // Reset display property for categories
+  emptyStateWrapper.style.display = ''; // And for the empty state
+  // Use a timeout to allow the display property to apply before fading in
   setTimeout(() => {
+    categoriesSection.style.opacity = '';
+    categoriesSection.style.visibility = '';
+  }, 20);
+  departmentDetailSection.classList.remove('is-active');
+  
+  // Re-initialize the featured department card after a short delay
+  setTimeout(() => {
+    initFeaturedDepartment();
     categoriesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 100);
 }
+
+// Bind click events to empty state icons to open departments
+function bindEmptyStateIcons() {
+  document.querySelectorAll('.empty-icon').forEach(icon => {
+    // Remove existing listener to avoid duplicates
+    const deptId = icon.dataset.dept;
+    icon.removeEventListener('click', icon._clickHandler);
+    icon._clickHandler = () => {
+      showDepartmentDetail(deptId);
+    };
+    icon.addEventListener('click', icon._clickHandler);
+    icon.style.cursor = 'pointer';
+  });
+}
+
+// Initialize empty state icon clicks on page load
+document.addEventListener('DOMContentLoaded', () => {
+  bindEmptyStateIcons();
+  initFeaturedDepartment(); // Initialize the new featured card
+});
+
+// ================================================================
+// ===== NEW: FEATURED DEPARTMENT CARD =====
+// ================================================================
+let featuredDeptState = {
+  currentIndex: 0,
+  interval: null
+};
+
+function initFeaturedDepartment() {
+  const card = document.getElementById('featured-department-card');
+  if (!card) return;
+
+  const prevBtn = document.getElementById('featured-card-prev');
+  const nextBtn = document.getElementById('featured-card-next');
+
+  // Function to go to a specific department
+  const goToFeaturedDept = (index) => {
+    const total = departmentData.length;
+    if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
+    featuredDeptState.currentIndex = index;
+    updateFeaturedCard(departmentData[index]);
+  };
+
+  // Set up navigation
+  prevBtn.addEventListener('click', () => goToFeaturedDept(featuredDeptState.currentIndex - 1));
+  nextBtn.addEventListener('click', () => goToFeaturedDept(featuredDeptState.currentIndex + 1));
+
+  // Pause on hover
+  card.addEventListener('mouseenter', () => clearInterval(featuredDeptState.interval));
+  card.addEventListener('mouseleave', startFeaturedDeptCycle);
+
+  // Start the cycle
+  goToFeaturedDept(0); // Show the first one immediately
+  startFeaturedDeptCycle();
+}
+
+function startFeaturedDeptCycle() {
+  clearInterval(featuredDeptState.interval); // Clear any existing interval
+  featuredDeptState.interval = setInterval(() => {
+    featuredDeptState.currentIndex = (featuredDeptState.currentIndex + 1) % departmentData.length;
+    updateFeaturedCard(departmentData[featuredDeptState.currentIndex]);
+  }, 4000); // Cycle every 4 seconds
+}
+
+function updateFeaturedCard(dept) {
+  const card = document.getElementById('featured-department-card');
+  const img = document.getElementById('featured-card-image');
+  const title = document.getElementById('featured-card-title');
+  const button = document.getElementById('featured-card-button');
+
+  if (!card || !dept) return;
+
+  // Map department IDs to colors
+  const colorMap = {
+    'clothing': 'var(--marigold)', 'fancy-items': 'var(--marigold)',
+    'footwear': 'var(--signal-red)', 'gifts': 'var(--signal-red)',
+    'grocery': 'var(--sage)', 'cool-drinks': 'var(--sage)',
+    'stationery': 'var(--teal)', 'daily-home-needs': 'var(--teal)',
+    'xerox-printing': 'var(--plum)'
+  };
+  const color = colorMap[dept.id] || 'var(--marigold)';
+
+  // Update styles
+  card.style.borderColor = color;
+  button.style.backgroundColor = color;
+
+  // Update content
+  title.textContent = dept.name;
+  button.onclick = () => showDepartmentDetail(dept.id);
+
+  // Fade image transition
+  img.classList.remove('is-visible');
+  setTimeout(() => {
+    img.src = dept.images[0] || ''; // Use first image
+    img.alt = `Featured: ${dept.name}`;
+    img.onload = () => img.classList.add('is-visible');
+  }, 300); // Half of the transition duration
+}
+
+
 
 // ================================================================
 // ===== SLIDESHOW ENGINE =====
@@ -511,6 +698,12 @@ function initSlideshow(images) {
   // Clear any existing interval
   if (window._slideshowInterval) {
     clearInterval(window._slideshowInterval);
+    window._slideshowInterval = null;
+  }
+  // Reset progress bar
+  if (window._progressInterval) {
+    clearInterval(window._progressInterval);
+    window._progressInterval = null;
   }
 
   // Set up navigation
@@ -540,28 +733,65 @@ function initSlideshow(images) {
     });
   });
 
-  // Click on image to open lightbox
-  const currentImg = slides[0].querySelector('.slideshow-img');
-  if (currentImg) {
-    slides.forEach((slide, i) => {
-      const img = slide.querySelector('.slideshow-img');
-      if (img) {
-        img.addEventListener('click', () => {
-          openLightbox(i);
-        });
-        img.style.cursor = 'pointer';
-      }
+  // Set up thumbnail navigation
+  const thumbs = document.querySelectorAll('.slideshow-thumb');
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const idx = parseInt(thumb.dataset.thumbIndex);
+      goToSlide(idx, slides);
     });
-  }
+  });
 
-  // Hover pause / resume autoplay
+  // Click on image to open lightbox
+  slides.forEach((slide, i) => {
+    const img = slide.querySelector('.slideshow-img');
+    if (img) {
+      img.addEventListener('click', () => {
+        openLightbox(i);
+      });
+      img.style.cursor = 'pointer';
+    }
+  });
+
+  // ===== SWIPE SUPPORT =====
   const container = document.getElementById('slideshow-container');
   if (container) {
-    container.addEventListener('mouseenter', () => {
-      if (window._slideshowInterval) {
-        clearInterval(window._slideshowInterval);
-        window._slideshowInterval = null;
+    let startX = 0;
+    let isSwiping = false;
+
+    container.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].screenX;
+      isSwiping = true;
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      // Prevent default to avoid page scroll while swiping
+      // but only if horizontal movement is significant
+      const diff = Math.abs(e.changedTouches[0].screenX - startX);
+      if (diff > 10) {
+        e.preventDefault();
       }
+    }, { passive: false });
+
+    container.addEventListener('touchend', (e) => {
+      if (!isSwiping) return;
+      isSwiping = false;
+      const endX = e.changedTouches[0].screenX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          goToSlide(slideshowState.currentIndex + 1, slides);
+        } else {
+          goToSlide(slideshowState.currentIndex - 1, slides);
+        }
+      }
+    }, { passive: true });
+
+    // Hover pause / resume autoplay
+    container.addEventListener('mouseenter', () => {
+      pauseAutoplay();
     });
     container.addEventListener('mouseleave', () => {
       startAutoplay();
@@ -589,19 +819,73 @@ function goToSlide(index, slides) {
     dot.classList.toggle('is-active', i === index);
   });
 
+  // Update thumbnails
+  const thumbs = document.querySelectorAll('.slideshow-thumb');
+  thumbs.forEach((thumb, i) => {
+    thumb.classList.toggle('is-active', i === index);
+    // Scroll active thumb into view
+    if (i === index) {
+      thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  });
+
   // Update counter
   const counter = document.getElementById('slideshow-counter');
   if (counter) {
     counter.textContent = `${index + 1} / ${total}`;
   }
 
+  // Reset progress bar
+  const progressBar = document.getElementById('slideshow-progress-bar');
+  if (progressBar) {
+    progressBar.style.width = '0%';
+  }
+
   slideshowState.currentIndex = index;
 }
 
-function startAutoplay() {
+// Progress bar animation
+function startProgressBar() {
+  const bar = document.getElementById('slideshow-progress-bar');
+  if (!bar) return;
+  bar.style.width = '0%';
+  let startTime = null;
+  const duration = 5000; // 5 seconds
+
+  if (window._progressInterval) {
+    cancelAnimationFrame(window._progressInterval);
+  }
+
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1) * 100;
+    bar.style.width = progress + '%';
+    if (progress < 100) {
+      window._progressInterval = requestAnimationFrame(step);
+    }
+  }
+
+  window._progressInterval = requestAnimationFrame(step);
+}
+
+function pauseAutoplay() {
   if (window._slideshowInterval) {
     clearInterval(window._slideshowInterval);
+    window._slideshowInterval = null;
   }
+  // Pause progress bar
+  if (window._progressInterval) {
+    cancelAnimationFrame(window._progressInterval);
+    window._progressInterval = null;
+  }
+}
+
+function startAutoplay() {
+  pauseAutoplay();
+  // Start progress bar
+  startProgressBar();
+  // Start interval for slide change
   window._slideshowInterval = setInterval(() => {
     const track = document.getElementById('slideshow-track');
     const slides = track ? track.querySelectorAll('.slideshow-slide') : [];
@@ -800,13 +1084,16 @@ const sections = document.querySelectorAll('section[id]');
 
 function updateActiveNav() {
   let current = '';
+  const headerOffset = 120;
   sections.forEach(section => {
-    const top = section.offsetTop - 120;
-    if (window.scrollY >= top) {
+    const sectionTop = section.offsetTop - headerOffset;
+    const sectionHeight = section.offsetHeight;
+    // Check if section is in view
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
       current = section.getAttribute('id');
     }
   });
-
+  
   navLinks.forEach(link => {
     link.classList.remove('is-active');
     if (link.getAttribute('href') === '#' + current) {
@@ -817,3 +1104,14 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 updateActiveNav();
+
+// Handle main navigation "Categories" link to exit department detail view
+const mainNavCategoriesLink = document.querySelector('.main-nav a[href="#categories"]');
+if (mainNavCategoriesLink) {
+  mainNavCategoriesLink.addEventListener('click', (e) => {
+    // If department detail is active, hide it when clicking main nav categories link
+    if (departmentDetailSection.classList.contains('is-active')) {
+      hideDepartmentDetail();
+    }
+  });
+}
