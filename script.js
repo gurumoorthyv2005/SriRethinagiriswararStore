@@ -138,6 +138,7 @@ const typewriterLine = document.getElementById('typewriter-line');
 const typewriterCursor = document.getElementById('typewriter-cursor');
 
 function typewriterEffect() {
+  if (!typewriterLine || !typewriterCursor) return;
   const fullText = typewriterLine.textContent.trim(); // Capture content when effect starts
   let index = 0;
   typewriterLine.textContent = '';
@@ -154,11 +155,16 @@ function typewriterEffect() {
     }
   }
 
-  // Delay start slightly for page load
+// Delay start slightly for page load
   setTimeout(type, 400);
 }
 
-typewriterEffect();
+// Only run the typewriter on the main page (where #typewriter-line exists).
+// On department pages this element is absent, so running it would throw a
+// TypeError and halt the rest of the script (breaking the slideshow init).
+if (typewriterLine) {
+  typewriterEffect();
+}
 
 // ================================================================
 // ===== 6. CATEGORY FILTER =====
