@@ -514,7 +514,7 @@ img{ max-width:100%; display:block; }
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease, background 0.3s ease, transform 0.2s ease;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 }
 .slideshow-container:hover .slideshow-nav{
   opacity: 1;
@@ -568,7 +568,7 @@ img{ max-width:100%; display:block; }
   background: rgba(45, 55, 72, 0.55);
   padding: 4px 12px;
   border-radius: 999px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   letter-spacing: 0.04em;
 }
 

@@ -36,3 +36,11 @@
 - [x] All 9 departments load correctly with banners, subcategories, slideshow, thumbnails
 - [x] Lightbox modal for full-screen image viewing with keyboard navigation
 
+## 🔧 Step 6 (Fix): Images & Slideshow NOT Working
+- [x] **Root cause:** `initSlideshow()` overwrote the working, department-relevant Unsplash images already in the HTML with broken Pexels URLs from `departmentData`, and its `onerror` handler hid entire slides.
+- [x] Rewrote `initSlideshow()` to **reuse the pre-rendered slides already in the DOM** (keeping the working Unsplash images) instead of rebuilding them from Pexels data.
+- [x] Removed the `onerror` handler that hid an entire slide when a single image failed.
+- [x] Added graceful image error fallback (inline SVG placeholder) that shows a placeholder instead of hiding the slide.
+- [x] Fixed `goToSlide()` to auto-fetch slides from `#slideshow-track` when not passed, fixing the prev/next arrow buttons.
+- [x] Dots, thumbnails, counter, and lightbox now use the ACTUAL slide images from the DOM (working Unsplash URLs) instead of the broken Pexels data.
+- [x] Fixed the malformed stationery Pexels URL is no longer used (kept the working Unsplash images).

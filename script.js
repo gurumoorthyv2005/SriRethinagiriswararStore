@@ -244,12 +244,12 @@ const departmentData = [
     ],
     category: 'apparel',
     images: [
-      'https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=800&q=80', // T-shirts
-      'https://images.unsplash.com/photo-1603252109360-70495248a825?w=800&q=80', // Jeans
-      'https://images.unsplash.com/photo-1585487005169-5c354efe72a3?w=800&q=80', // Sarees
-      'https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80', // Men's shirts
-      'https://images.unsplash.com/photo-1622979213584-a121783b88a2?w=800&q=80', // Kids' wear
-      'https://images.unsplash.com/photo-1586363104862-3a5e2ab6d69a?w=800&q=80'  // General apparel
+      'https://images.pexels.com/photos/7679895/pexels-photo-7679895.jpeg?auto=compress&cs=tinysrgb&w=800', // Clothing rack
+      'https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&w=800', // Woman in dress
+      'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=800', // Jeans
+      'https://images.pexels.com/photos/5868710/pexels-photo-5868710.jpeg?auto=compress&cs=tinysrgb&w=800', // Kids clothes
+      'https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=800', // Men's fashion
+      'https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=800'  // Woman in traditional wear
     ]
   },
   {
@@ -264,12 +264,12 @@ const departmentData = [
     ],
     category: 'apparel',
     images: [
-      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80', // Men's shoes
-      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80', // Women's heels
-      'https://images.unsplash.com/photo-1603487742131-411a791ecf2f?w=800&q=80', // Kids' shoes
-      'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&q=80', // Sandals
-      'https://images.unsplash.com/photo-1608231387042-66d1673070a5?w=800&q=80', // Slippers
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80'  // Sports shoes
+      'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800', // Nike shoe
+      'https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=800', // Shoe store
+      'https://images.pexels.com/photos/2759793/pexels-photo-2759793.jpeg?auto=compress&cs=tinysrgb&w=800', // Sandals
+      'https://images.pexels.com/photos/19090/pexels-photo-19090.jpeg?auto=compress&cs=tinysrgb&w=800', // Converse shoes
+      'https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?auto=compress&cs=tinysrgb&w=800', // Brown leather shoes
+      'https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?auto=compress&cs=tinysrgb&w=800'  // Kids shoes
     ]
   },
   {
@@ -284,12 +284,12 @@ const departmentData = [
     ],
     category: 'food',
     images: [
-      'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', // Packaged goods aisle
-      'https://images.unsplash.com/photo-1606859191214-a8a24b8f5aa6?w=800&q=80', // Spices
-      'https://images.unsplash.com/photo-1526423428206-30b1a13a2b68?w=800&q=80', // Rice and grains
-      'https://images.unsplash.com/photo-1584306670957-acf935f5033c?w=800&q=80', // Fresh produce
-      'https://images.unsplash.com/photo-1587049352851-d8a8353242ef?w=800&q=80', // Cooking oils
-      'https://images.unsplash.com/photo-1583255113925-520a899443b0?w=800&q=80'  // Snacks and biscuits
+      'https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg?auto=compress&cs=tinysrgb&w=800', // Grocery cart
+      'https://images.pexels.com/photos/1656663/pexels-photo-1656663.jpeg?auto=compress&cs=tinysrgb&w=800', // Spices
+      'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=800', // Fruits and vegetables
+      'https://images.pexels.com/photos/375889/pexels-photo-375889.jpeg?auto=compress&cs=tinysrgb&w=800', // Bread
+      'https://images.pexels.com/photos/5946723/pexels-photo-5946723.jpeg?auto=compress&cs=tinysrgb&w=800', // Grains in bags
+      'https://images.pexels.com/photos/5624983/pexels-photo-5624983.jpeg?auto=compress&cs=tinysrgb&w=800'  // Packaged goods
     ]
   },
   {
@@ -304,12 +304,12 @@ const departmentData = [
     ],
     category: 'services',
     images: [
-      'https://images.unsplash.com/photo-1456735190827-d1262f71b8f3?w=800&q=80', // Notebooks
-      'https://images.unsplash.com/photo-1520412099554-642d85a1b319?w=800&q=80', // Pens
-      'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=800&q=80', // Art supplies
-      'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80', // Craft paper
-      'https://images.unsplash.com/photo-1516962126624-3e97e7071a82?w=800&q=80', // Office supplies
-      'https://images.unsplash.com/photo-1629909822946-5472b3626639?w=800&q=80'  // Files and folders
+      'https://images.pexels.com/photos/163064/play-stone-network-networked-163064.jpeg?auto=compress&cs=tinysrgb&w=800', // Colorful pens
+      'https://images.pexels.com/photos/211536/pexels-photo-211536.jpeg?auto=compress&cs=tinysrgb&w=800', // Notebooks
+      'https://images.pexels.com/photos/6046188/pexels-photo-6046188.jpeg?auto=compress&cs=tinysrgb&w=800', // Art supplies
+      'https://images.pexels.com/photos/159775/library-book-books-research-159775.jpeg?auto=compress&cs=tinysrgb&w=800', // Books
+      'https://images.pexels.com/photos/5797991/pexels-photo-5797991.jpeg?auto=compress&cs=tinysrgb&w=800', // Desk setup
+      'https.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=800'  // School supplies
     ]
   },
   {
@@ -324,12 +324,12 @@ const departmentData = [
     ],
     category: 'services',
     images: [
-      'https://images.unsplash.com/photo-1612831455749-a6d351ad1f1f?w=800&q=80', // Printer in action
-      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80', // Stack of printed documents
-      'https://images.unsplash.com/photo-1521993981534-c8c36069104a?w=800&q=80', // Lamination machine
-      'https://images.unsplash.com/photo-1580992734409-4130a73a3188?w=800&q=80', // Spiral bound book
-      'https://images.unsplash.com/photo-1629909822946-5472b3626639?w=800&q=80', // Office copier
-      'https://images.unsplash.com/photo-1604782339320-53c57c3372d2?w=800&q=80'  // Passport photo setup
+      'https://images.pexels.com/photos/1845548/pexels-photo-1845548.jpeg?auto=compress&cs=tinysrgb&w=800', // Printer
+      'https://images.pexels.com/photos/3856027/pexels-photo-3856027.jpeg?auto=compress&cs=tinysrgb&w=800', // Person using copier
+      'https://images.pexels.com/photos/596133/pexels-photo-596133.jpeg?auto=compress&cs=tinysrgb&w=800', // Stack of paper
+      'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=800', // Office desk
+      'https://images.pexels.com/photos/7097/people-office-group-team.jpg?auto=compress&cs=tinysrgb&w=800', // Office work
+      'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'  // Documents
     ]
   },
   {
@@ -344,12 +344,12 @@ const departmentData = [
     ],
     category: 'apparel',
     images: [
-      'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80', // Cosmetics set
-      'https://images.unsplash.com/photo-1599948124513-d19a78718a12?w=800&q=80', // Bangles
-      'https://images.unsplash.com/photo-1588796124469-275a2a5042a9?w=800&q=80', // Handbags
-      'https://images.unsplash.com/photo-1615951418528-616de35a2394?w=800&q=80', // Earrings
-      'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80', // Hair clips
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80'  // Skincare products
+      'https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=800', // Jewelry
+      'https://images.pexels.com/photos/264726/pexels-photo-264726.jpeg?auto=compress&cs=tinysrgb&w=800', // Cosmetics
+      'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=800', // Handbags
+      'https://images.pexels.com/photos/3755680/pexels-photo-3755680.jpeg?auto=compress&cs=tinysrgb&w=800', // Skincare
+      'https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&w=800', // Perfume
+      'https://images.pexels.com/photos/965981/pexels-photo-965981.jpeg?auto=compress&cs=tinysrgb&w=800'  // Bangles
     ]
   },
   {
@@ -364,12 +364,12 @@ const departmentData = [
     ],
     category: 'home',
     images: [
-      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80', // Wrapped presents
-      'https://images.unsplash.com/photo-1513207565459-d7f36bfa7d23?w=800&q=80', // Gift wrapping supplies
-      'https://images.unsplash.com/photo-1572095689026-f6385433c2a9?w=800&q=80', // Greeting cards
-      'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80', // Gift boxes
-      'https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?w=800&q=80', // Toys for gifts
-      'https://images.unsplash.com/photo-1549465220-1a8b9238cd98?w=800&q=80'  // Ribbons and bows
+      'https://images.pexels.com/photos/41004/albert-einstein-statue-portrait-famous-41004.jpeg?auto=compress&cs=tinysrgb&w=800', // Gift boxes
+      'https://images.pexels.com/photos/168866/pexels-photo-168866.jpeg?auto=compress&cs=tinysrgb&w=800', // Gift wrapping
+      'https://images.pexels.com/photos/1250462/pexels-photo-1250462.jpeg?auto=compress&cs=tinysrgb&w=800', // Person giving gift
+      'https://images.pexels.com/photos/461060/pexels-photo-461060.jpeg?auto=compress&cs=tinysrgb&w=800', // Greeting card
+      'https://images.pexels.com/photos/931007/pexels-photo-931007.jpeg?auto=compress&cs=tinysrgb&w=800', // Toys
+      'https://images.pexels.com/photos/3840441/pexels-photo-3840441.jpeg?auto=compress&cs=tinysrgb&w=800'  // Festive items
     ]
   },
   {
@@ -384,12 +384,12 @@ const departmentData = [
     ],
     category: 'food',
     images: [
-      'https://images.unsplash.com/photo-1581006852262-4307d6283b9a?w=800&q=80', // Refrigerator with drinks
-      'https://images.unsplash.com/photo-1551029506-0807df4e2031?w=800&q=80', // Milkshakes
-      'https://images.unsplash.com/photo-1553531889-56cc480ac5cb?w=800&q=80', // Fruit juices
-      'https://images.unsplash.com/photo-1575596511241-b021b80a4933?w=800&q=80', // Cans of soda
-      'https://images.unsplash.com/photo-1543253687-c931c8e01820?w=800&q=80', // Bottled water
-      'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80'  // Ice cream cones
+      'https://images.pexels.com/photos/3028500/pexels-photo-3028500.jpeg?auto=compress&cs=tinysrgb&w=800', // Drink fridge
+      'https://images.pexels.com/photos/1304508/pexels-photo-1304508.jpeg?auto=compress&cs=tinysrgb&w=800', // Soda cans
+      'https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&w=800', // Juices
+      'https://images.pexels.com/photos/3727196/pexels-photo-3727196.jpeg?auto=compress&cs=tinysrgb&w=800', // Milkshakes
+      'https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=800', // Ice cream
+      'https://images.pexels.com/photos/1200348/pexels-photo-1200348.jpeg?auto=compress&cs=tinysrgb&w=800'  // Bottled drinks
     ]
   },
   {
@@ -404,12 +404,12 @@ const departmentData = [
     ],
     category: 'home',
     images: [
-      'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80', // Cleaning sprays
-      'https://images.unsplash.com/photo-1584776710758-a7654078a963?w=800&q=80', // Bar soaps
-      'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80', // Toothbrushes and toothpaste
-      'https://images.unsplash.com/photo-1598611138623-02e2a858915a?w=800&q=80', // Light bulbs
-      'https://images.unsplash.com/photo-1627906232539-4153582a1b94?w=800&q=80', // Laundry detergent
-      'https://images.unsplash.com/photo-1563299796-1750ed7b0074?w=800&q=80'  // Candles
+      'https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800', // Cleaning supplies
+      'https://images.pexels.com/photos/4210315/pexels-photo-4210315.jpeg?auto=compress&cs=tinysrgb&w=800', // Toiletries
+      'https://images.pexels.com/photos/459978/pexels-photo-459978.jpeg?auto=compress&cs=tinysrgb&w=800', // Laundry
+      'https://images.pexels.com/photos/6781256/pexels-photo-6781256.jpeg?auto=compress&cs=tinysrgb&w=800', // Dishwashing
+      'https://images.pexels.com/photos/1118427/pexels-photo-1118427.jpeg?auto=compress&cs=tinysrgb&w=800', // Light bulbs
+      'https://images.pexels.com/photos/3683056/pexels-photo-3683056.jpeg?auto=compress&cs=tinysrgb&w=800'  // Batteries
     ]
   }
 ];
@@ -504,37 +504,84 @@ let slideshowState = {
   images: []
 };
 
+// Inline SVG placeholder shown when an image fails to load.
+const PLACEHOLDER_IMG = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">' +
+    '<rect width="800" height="600" fill="#EDF2F7"/>' +
+    '<text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#4A5568">Image unavailable</text>' +
+    '<text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#A0AEC0">Sri Rethinagiriswarar Stores</text>' +
+  '</svg>'
+);
+
 function initSlideshow(images) {
   const track = document.getElementById('slideshow-track');
-  const slides = track ? track.querySelectorAll('.slideshow-slide') : [];
+  if (!track) return;
+
+  // REUSE the pre-rendered slides already present in the HTML.
+  // This keeps the working, department-relevant Unsplash images in place
+  // instead of overwriting them with the departmentData Pexels URLs
+  // (some of which were broken/malformed).
+  if (track.querySelector('.slideshow-slide')) {
+    // Keep existing slides as-is and continue setup below.
+  } else {
+    // Fallback: only build slides dynamically if none are pre-rendered.
+    track.innerHTML = (images || []).map((imgSrc, i) => `
+      <div class="slideshow-slide ${i === 0 ? 'is-active' : ''}" data-index="${i}">
+        <img src="${imgSrc}" alt="Department image ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}" class="slideshow-img">
+        <div class="slideshow-caption">Image ${i + 1} of ${images.length}</div>
+      </div>
+    `).join('');
+  }
+
+  const slides = track.querySelectorAll('.slideshow-slide');
   if (!slides.length) return;
 
-  // Since the HTML is pre-rendered, we just need to build the dots and thumbnails
+// Graceful error fallback: never hide an entire slide if an image fails.
+  slides.forEach(slide => {
+    const img = slide.querySelector('.slideshow-img');
+    if (img && !img.hasAttribute('data-fallback-bound')) {
+      img.setAttribute('data-fallback-bound', 'true');
+      img.addEventListener('error', () => {
+        if (!img.dataset.fallbackApplied) {
+          img.dataset.fallbackApplied = 'true';
+          img.src = PLACEHOLDER_IMG;
+        }
+      });
+    }
+  });
+
   const dotsContainer = document.getElementById('slideshow-dots');
   const thumbsContainer = document.getElementById('slideshow-thumbnails');
   const counter = document.getElementById('slideshow-counter');
 
+  // Build dots, thumbnails, and state from the ACTUAL slides in the DOM
+  // (which carry the working, department-relevant Unsplash images).
+  const slideImages = Array.from(slides).map(slide => {
+    const img = slide.querySelector('.slideshow-img');
+    return img ? img.getAttribute('src') : '';
+  });
+
   if (dotsContainer) {
-    dotsContainer.innerHTML = images.map((_, i) => 
+    dotsContainer.innerHTML = slideImages.map((_, i) => 
       `<button class="slideshow-dot ${i === 0 ? 'is-active' : ''}" data-slide="${i}" aria-label="Go to image ${i + 1}"></button>`
     ).join('');
   }
 
   if (thumbsContainer) {
-    thumbsContainer.innerHTML = images.map((imgSrc, i) => `
+    thumbsContainer.innerHTML = slideImages.map((imgSrc, i) => `
       <div class="slideshow-thumb ${i === 0 ? 'is-active' : ''}" data-thumb-index="${i}">
-        <img src="${imgSrc}" alt="" loading="lazy" onerror="this.style.display='none'">
+        <img src="${imgSrc}" alt="" loading="lazy">
       </div>
     `).join('');
   }
 
   if(counter) {
-    counter.textContent = `1 / ${images.length}`;
+    counter.textContent = `1 / ${slides.length}`;
   }
 
   slideshowState.currentIndex = 0;
   slideshowState.totalSlides = slides.length;
-  slideshowState.images = images;
+  slideshowState.images = slideImages;
 
   // Explicitly set the first slide as active to ensure visibility on page load
   goToSlide(0, slides);
@@ -651,6 +698,11 @@ if (document.getElementById('slideshow-container')) {
   }
 }
 function goToSlide(index, slides) {
+  // Auto-fetch slides from the DOM if not provided (fixes prev/next buttons).
+  if (!slides || !slides.length) {
+    const track = document.getElementById('slideshow-track');
+    slides = track ? track.querySelectorAll('.slideshow-slide') : [];
+  }
   const total = slides.length;
   // Wrap around
   if (index < 0) index = total - 1;
