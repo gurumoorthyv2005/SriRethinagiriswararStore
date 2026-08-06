@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clothing — Sri Rethinagiriswarar Stores</title>
+<meta name="description" content="Explore the departments of Sri Rethinagiriswarar Stores — clothing, footwear, grocery, stationery, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400;700&family=Cutive+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-department-id="clothing">
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="rail" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="index.html#top">
+      <span class="brand-mark">S</span>
+      <span class="brand-text">SRI RETHINAGIRISWARAR<small>STORES</small></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html#categories" class="nav-link">Categories</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#visit" class="nav-link">Visit Us</a>
+    </nav>
+
+    <!-- Live Clock -->
+    <div class="live-clock" id="live-clock" title="Current time">--:-- --</div>
+
+    <div class="status-chip" id="status-chip">
+      <span class="dot"></span>
+      <span id="status-text">Checking hours…</span>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+      <span class="toggle-icon" id="toggle-icon">☀️</span>
+    </button>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- DEPARTMENT DETAIL SECTION -->
+  <section class="department-detail is-active" id="department-detail">
+    <div class="department-detail-inner" id="department-detail-inner">
+      <!-- Content is now pre-rendered -->
+      <div class="department-breadcrumb">
+        <a href="index.html#categories">Departments</a>
+        <span>/</span>
+        <span class="breadcrumb-current">Clothing</span>
+      </div>
+  
+      <div class="department-banner banner--marigold">
+        <p class="eyebrow">Department</p>
+        <h2>Clothing</h2>
+        <p>Everyday wear for every age, from traditional to modern styles. Discover our wide range of apparel for men, women, and children, featuring the latest trends and comfortable classics.</p>
+      </div>
+  
+      <a href="index.html#categories" class="btn btn-ghost department-back-btn">&larr; Back to All Categories</a>
+    
+      <div class="department-detail-grid">
+        <div class="department-images">
+          <div class="slideshow-container" id="slideshow-container">
+            <div class="slideshow-track" id="slideshow-track">
+              <div class="slideshow-slide is-active" data-index="0">
+                <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=800&q=80" alt="Clothing — image 1" loading="eager" class="slideshow-img">
+                <div class="slideshow-caption">Our wide selection</div>
+              </div>
+              <div class="slideshow-slide" data-index="1">
+                <img src="https://images.unsplash.com/photo-1603252109360-70495248a825?w=800&q=80" alt="Clothing — image 2" loading="lazy" class="slideshow-img">
+                <div class="slideshow-caption">Quality you can trust</div>
+              </div>
+              <div class="slideshow-slide" data-index="2">
+                <img src="https://images.unsplash.com/photo-1585487005169-5c354efe72a3?w=800&q=80" alt="Clothing — image 3" loading="lazy" class="slideshow-img">
+                <div class="slideshow-caption">Fresh & ready for you</div>
+              </div>
+              <div class="slideshow-slide" data-index="3">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80" alt="Clothing — image 4" loading="lazy" class="slideshow-img">
+                <div class="slideshow-caption">Browse in comfort</div>
+              </div>
+              <div class="slideshow-slide" data-index="4">
+                <img src="https://images.unsplash.com/photo-1622979213584-a121783b88a2?w=800&q=80" alt="Clothing — image 5" loading="lazy" class="slideshow-img">
+                <div class="slideshow-caption">Always well-stocked</div>
+              </div>
+              <div class="slideshow-slide" data-index="5">
+                <img src="https://images.unsplash.com/photo-1586363104862-3a5e2ab6d69a?w=800&q=80" alt="Clothing — image 6" loading="lazy" class="slideshow-img">
+                <div class="slideshow-caption">Come explore today</div>
+              </div>
+            </div>
+            <button class="slideshow-nav slideshow-nav--prev" id="slideshow-prev" aria-label="Previous image">&lsaquo;</button>
+            <button class="slideshow-nav slideshow-nav--next" id="slideshow-next" aria-label="Next image">&rsaquo;</button>
+            <div class="slideshow-dots" id="slideshow-dots"></div>
+            <div class="slideshow-counter" id="slideshow-counter"></div>
+            <div class="slideshow-progress"><div class="slideshow-progress-bar" id="slideshow-progress-bar"></div></div>
+            <div class="swipe-indicator" id="swipe-indicator">&#8592; &#8594;</div>
+          </div>
+          <div class="slideshow-thumbnails" id="slideshow-thumbnails"></div>
+        </div>
+        <div class="department-detail-content-grid">
+          <div class="department-subcategory"><h3>Men's Wear</h3><ul><li>Shirts</li><li>Trousers</li><li>Kurtas</li><li>Jeans</li></ul></div>
+          <div class="department-subcategory"><h3>Women's Wear</h3><ul><li>Sarees</li><li>Salwar Sets</li><li>Lehengas</li><li>Dresses</li></ul></div>
+          <div class="department-subcategory"><h3>Kids' Wear</h3><ul><li>T-shirts</li><li>Shorts</li><li>Frocks</li><li>School Uniforms</li></ul></div>
+          <div class="department-subcategory"><h3>Innerwear & Nightwear</h3><ul><li>Vests</li><li>Briefs</li><li>Pyjamas</li><li>Nighties</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Related Departments Section -->
+      <div class="related-departments" id="related-departments">
+        <!-- Content will be injected by script.js -->
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> Sri Rethinagiriswarar Stores. All rights reserved.</p>
+    <p class="footer-credit">SRS <a href="#top">back to top ↑</a></p>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

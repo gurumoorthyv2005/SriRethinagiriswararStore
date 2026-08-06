@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Rethinagiriswarar Stores — Everything, One Roof</title>
-<meta name="description" content="Sri Rethinagiriswarar Stores — clothing, footwear, grocery, stationery, xerox, fancy items, gifts, cool drinks and daily home needs, all under one roof.">
+<title>Sri Rethinagiriswarar Stores — One Street, One Shop, Everything You Need</title>
+<meta name="description" content="Sri Rethinagiriswarar Stores: Your one-stop shop for clothing, groceries, stationery, and more. Nine departments under one roof for your convenience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400;700&family=Cutive+Mono&display=swap" rel="stylesheet">
@@ -57,14 +57,14 @@
       <p class="eyebrow">Est. 2010  Malaipatty, Karur, Tamil Nadu</p>
       <h1 class="hero-title">
         <span class="typewriter-line" id="typewriter-line">
-          One street.<br>One shop.<br>Everything you need.
+          One street. One shop. Everything you need.
         </span>
         <span class="typewriter-cursor" id="typewriter-cursor">|</span>
       </h1>
-      <p class="hero-sub">Clothing to xerox, groceries to gifts — nine departments, one counter, no second trip.</p>
+      <p class="hero-sub">From clothing to xerox, groceries to gifts — discover everything you need, all in one seamless visit.</p>
       <div class="hero-actions">
-        <a href="#categories" class="btn btn-primary">See what's inside</a>
-        <a href="#visit" class="btn btn-ghost">Get directions</a>
+        <a href="#categories" class="btn btn-primary">Explore Departments</a>
+        <a href="#visit" class="btn btn-ghost">Plan Your Visit</a>
       </div>
     </div>
     <div class="hero-signboard" aria-hidden="true">
@@ -83,6 +83,14 @@
       <h2>Nine shops. One address.</h2>
     </div>
 
+    <!-- NEW: Search Bar -->
+    <div class="search-wrapper" data-reveal>
+      <div class="search-bar">
+        <input type="search" id="search-input" placeholder="Search for a department (e.g., 'grocery', 'shoes')...">
+        <button id="search-clear" aria-label="Clear search">&times;</button>
+      </div>
+    </div>
+
     <!-- Filter Buttons -->
     <div class="filter-bar" id="filter-bar">
       <button class="filter-btn is-active" data-filter="all">All</button>
@@ -94,7 +102,7 @@
 
     <div class="tag-board" id="tag-board">
 
-      <article class="tag tag--marigold" data-reveal data-category="apparel" data-department-id="clothing" tabindex="0">
+      <a href="clothing.html" class="tag tag--marigold" data-reveal data-category="apparel">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8l8 6 8-6 6 6-6 6v22H10V20l-6-6z"/></svg></div>
           <h3>Clothing</h3>
@@ -106,9 +114,9 @@
           <li>Kids' wear</li>
           <li>Innerwear &amp; nightwear</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--red" data-reveal data-category="apparel" data-department-id="footwear" tabindex="0">
+      <a href="footwear.html" class="tag tag--red" data-reveal data-category="apparel">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 34c0-8 4-14 10-16M8 34h14M30 34c2-10 8-16 14-16-2 6-2 12 0 16H30z"/></svg></div>
           <h3>Footwear</h3>
@@ -120,9 +128,9 @@
           <li>Sports shoes</li>
           <li>Formal footwear</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--sage" data-reveal data-category="food" data-department-id="grocery" tabindex="0">
+      <a href="grocery.html" class="tag tag--sage" data-reveal data-category="food">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18h20l-2 20H16z"/><path d="M18 18a6 6 0 0112 0"/></svg></div>
           <h3>Grocery</h3>
@@ -134,9 +142,9 @@
           <li>Snacks &amp; packaged foods</li>
           <li>Dairy essentials</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--teal" data-reveal data-category="services" data-department-id="stationery" tabindex="0">
+      <a href="stationery.html" class="tag tag--teal" data-reveal data-category="services">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8h18l6 6v26H12z"/><path d="M30 8v6h6"/><line x1="18" y1="22" x2="30" y2="22"/><line x1="18" y1="28" x2="30" y2="28"/><line x1="18" y1="34" x2="26" y2="34"/></svg></div>
           <h3>Stationery</h3>
@@ -148,9 +156,9 @@
           <li>Files &amp; folders</li>
           <li>Exam &amp; office kits</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--plum" data-reveal data-category="services" data-department-id="xerox-printing" tabindex="0">
+      <a href="xerox-printing.html" class="tag tag--plum" data-reveal data-category="services">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="12" width="28" height="24" rx="2"/><line x1="10" y1="20" x2="38" y2="20"/><line x1="16" y1="12" x2="16" y2="36"/></svg></div>
           <h3>Xerox &amp; Printing</h3>
@@ -162,9 +170,9 @@
           <li>Spiral &amp; hard binding</li>
           <li>Passport photos</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--marigold" data-reveal data-category="apparel" data-department-id="fancy-items" tabindex="0">
+      <a href="fancy-items.html" class="tag tag--marigold" data-reveal data-category="apparel">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="6"/><circle cx="12" cy="30" r="5"/><circle cx="36" cy="30" r="5"/></svg></div>
           <h3>Fancy Items</h3>
@@ -176,9 +184,9 @@
           <li>Bags &amp; pouches</li>
           <li>Cosmetics</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--red" data-reveal data-category="home" data-department-id="gifts" tabindex="0">
+      <a href="gifts.html" class="tag tag--red" data-reveal data-category="home">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="18" width="24" height="18" rx="2"/><path d="M12 18l4-6h16l4 6"/><line x1="24" y1="18" x2="24" y2="36"/></svg></div>
           <h3>Gifts</h3>
@@ -190,9 +198,9 @@
           <li>Return gifts</li>
           <li>Festive hampers</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--sage" data-reveal data-category="food" data-department-id="cool-drinks" tabindex="0">
+      <a href="cool-drinks.html" class="tag tag--sage" data-reveal data-category="food">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h12l2 8-3 3v15a2 2 0 01-2 2H21a2 2 0 01-2-2V21l-3-3z"/><line x1="17" y1="26" x2="31" y2="26"/></svg></div>
           <h3>Cool Drinks</h3>
@@ -204,9 +212,9 @@
           <li>Buttermilk &amp; lassi</li>
           <li>Bottled water</li>
         </ul>
-      </article>
+      </a>
 
-      <article class="tag tag--teal" data-reveal data-category="home" data-department-id="daily-home-needs" tabindex="0">
+      <a href="daily-home-needs.html" class="tag tag--teal" data-reveal data-category="home">
         <div class="tag-header">
           <div class="tag-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 38V16l14-8 14 8v22z"/><line x1="24" y1="38" x2="24" y2="24"/><line x1="10" y1="24" x2="38" y2="24"/></svg></div>
           <h3>Daily Home Needs</h3>
@@ -218,91 +226,8 @@
           <li>Candles &amp; matches</li>
           <li>Batteries &amp; bulbs</li>
         </ul>
-      </article>
+      </a>
 
-    </div>
-  </section>
-
-  <!-- DEPARTMENT DETAIL SECTION -->
-  <section class="department-detail" id="department-detail">
-    <div class="department-detail-inner">
-      <!-- Content will be dynamically loaded here by script.js -->
-      <div id="department-detail-content"></div>
-    </div>
-  </section>
-
-  <!-- EMPTY STATE & FEATURED CARD (Moved here from #department-detail) -->
-  <section class="department-empty-state-wrapper" id="department-empty-state-wrapper">
-    <div class="department-detail-inner">
-      <div id="department-empty-state" class="department-empty-state">
-        <div class="empty-state-decor" aria-hidden="true">
-          <div class="floating-particle p1"></div>
-          <div class="floating-particle p2"></div>
-          <div class="floating-particle p3"></div>
-          <div class="floating-particle p4"></div>
-          <div class="floating-particle p5"></div>
-          <div class="floating-particle p6"></div>
-        </div>
-        
-        <div class="empty-state-content">
-          <p class="eyebrow">Explore Our Departments</p>
-          <h2>Discover what's inside</h2>
-          <p class="empty-state-sub">Click any department card above to dive into its unique collection — products, details, and a gallery of images await you.</p>
-          
-          <!-- NEW: Featured Department Card -->
-          <div class="featured-department-card" id="featured-department-card">
-            <div class="featured-card-image-wrapper">
-              <img src="" alt="Featured department" id="featured-card-image">
-            </div>
-            <div class="featured-card-content">
-              <h3 id="featured-card-title"></h3>
-              <a href="#" class="btn btn-primary" id="featured-card-button">View Department</a>
-            </div>
-            <button class="featured-card-nav featured-card-nav--prev" id="featured-card-prev" aria-label="Previous department">&lsaquo;</button>
-            <button class="featured-card-nav featured-card-nav--next" id="featured-card-next" aria-label="Next department">&rsaquo;</button>
-          </div>
-          <!-- END: Featured Department Card -->
-
-          <div class="empty-state-icons">
-            <div class="empty-icon" data-dept="clothing">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8l8 6 8-6 6 6-6 6v22H10V20l-6-6z"/></svg>
-              <span>Clothing</span>
-            </div>
-            <div class="empty-icon" data-dept="footwear">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 34c0-8 4-14 10-16M8 34h14M30 34c2-10 8-16 14-16-2 6-2 12 0 16H30z"/></svg>
-              <span>Footwear</span>
-            </div>
-            <div class="empty-icon" data-dept="grocery">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18h20l-2 20H16z"/><path d="M18 18a6 6 0 0112 0"/></svg>
-              <span>Grocery</span>
-            </div>
-            <div class="empty-icon" data-dept="stationery">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8h18l6 6v26H12z"/><path d="M30 8v6h6"/><line x1="18" y1="22" x2="30" y2="22"/><line x1="18" y1="28" x2="30" y2="28"/><line x1="18" y1="34" x2="26" y2="34"/></svg>
-              <span>Stationery</span>
-            </div>
-            <div class="empty-icon" data-dept="xerox-printing">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="12" width="28" height="24" rx="2"/><line x1="10" y1="20" x2="38" y2="20"/><line x1="16" y1="12" x2="16" y2="36"/></svg>
-              <span>Xerox</span>
-            </div>
-            <div class="empty-icon" data-dept="fancy-items">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="6"/><circle cx="12" cy="30" r="5"/><circle cx="36" cy="30" r="5"/></svg>
-              <span>Fancy</span>
-            </div>
-            <div class="empty-icon" data-dept="gifts">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="18" width="24" height="18" rx="2"/><path d="M12 18l4-6h16l4 6"/><line x1="24" y1="18" x2="24" y2="36"/></svg>
-              <span>Gifts</span>
-            </div>
-            <div class="empty-icon" data-dept="cool-drinks">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h12l2 8-3 3v15a2 2 0 01-2 2H21a2 2 0 01-2-2V21l-3-3z"/><line x1="17" y1="26" x2="31" y2="26"/></svg>
-              <span>Cool Drinks</span>
-            </div>
-            <div class="empty-icon" data-dept="daily-home-needs">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 38V16l14-8 14 8v22z"/><line x1="24" y1="38" x2="24" y2="24"/><line x1="10" y1="24" x2="38" y2="24"/></svg>
-              <span>Home Needs</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -333,7 +258,7 @@
         <ul class="detail-list">
           <li>
             <span class="detail-label">Address</span>
-            <span class="detail-value" id="address-text">6, Main Street, Malaipatty, Karur, Tamil Nadu 621001</span>
+            <span class="detail-value" id="address-text">6, Main Street, Malaipatty, Karur, Tamil Nadu 639102</span>
           </li>
           <li>
             <span class="detail-label">Hours</span>
@@ -341,7 +266,7 @@
           </li>
           <li>
             <span class="detail-label">Phone</span>
-            <span class="detail-value"><a href="tel:+919999999999" id="phone-link">+91 80567 79269</a></span>
+            <span class="detail-value"><a href="tel:+918056779269" id="phone-link">+91 80567 79269</a></span>
           </li>
         </ul>
 

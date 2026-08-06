@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footwear — Sri Rethinagiriswarar Stores</title>
+<meta name="description" content="Step out in style and comfort with our diverse footwear collection. We offer options for every member of the family and every occasion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400;700&family=Cutive+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-department-id="footwear">
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="rail" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="index.html#top">
+      <span class="brand-mark">S</span>
+      <span class="brand-text">SRI RETHINAGIRISWARAR<small>STORES</small></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html#categories" class="nav-link">Categories</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#visit" class="nav-link">Visit Us</a>
+    </nav>
+
+    <!-- Live Clock -->
+    <div class="live-clock" id="live-clock" title="Current time">--:-- --</div>
+
+    <div class="status-chip" id="status-chip">
+      <span class="dot"></span>
+      <span id="status-text">Checking hours…</span>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+      <span class="toggle-icon" id="toggle-icon">☀️</span>
+    </button>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- DEPARTMENT DETAIL SECTION -->
+  <section class="department-detail is-active" id="department-detail">
+    <div class="department-detail-inner" id="department-detail-inner">
+      <!-- Content is now pre-rendered -->
+      <div class="department-breadcrumb">
+        <a href="index.html#categories">Departments</a>
+        <span>/</span>
+        <span class="breadcrumb-current">Footwear</span>
+      </div>
+  
+      <div class="department-banner banner--red">
+        <p class="eyebrow">Department</p>
+        <h2>Footwear</h2>
+        <p>Step out in style and comfort with our diverse footwear collection. We offer options for every member of the family and every occasion.</p>
+      </div>
+  
+      <a href="index.html#categories" class="btn btn-ghost department-back-btn">&larr; Back to All Categories</a>
+    
+      <div class="department-detail-grid">
+        <div class="department-images">
+          <div class="slideshow-container" id="slideshow-container">
+            <div class="slideshow-track" id="slideshow-track">
+              <div class="slideshow-slide is-active" data-index="0"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80" alt="Footwear — image 1" loading="eager" class="slideshow-img"><div class="slideshow-caption">Our wide selection</div></div>
+              <div class="slideshow-slide" data-index="1"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80" alt="Footwear — image 2" loading="lazy" class="slideshow-img"><div class="slideshow-caption">Quality you can trust</div></div>
+              <div class="slideshow-slide" data-index="2"><img src="https://images.unsplash.com/photo-1603487742131-411a791ecf2f?w=800&q=80" alt="Footwear — image 3" loading="lazy" class="slideshow-img"><div class="slideshow-caption">Fresh & ready for you</div></div>
+              <div class="slideshow-slide" data-index="3"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&q=80" alt="Footwear — image 4" loading="lazy" class="slideshow-img"><div class="slideshow-caption">Browse in comfort</div></div>
+              <div class="slideshow-slide" data-index="4"><img src="https://images.unsplash.com/photo-1608231387042-66d1673070a5?w=800&q=80" alt="Footwear — image 5" loading="lazy" class="slideshow-img"><div class="slideshow-caption">Always well-stocked</div></div>
+              <div class="slideshow-slide" data-index="5"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80" alt="Footwear — image 6" loading="lazy" class="slideshow-img"><div class="slideshow-caption">Come explore today</div></div>
+            </div>
+            <button class="slideshow-nav slideshow-nav--prev" id="slideshow-prev" aria-label="Previous image">&lsaquo;</button>
+            <button class="slideshow-nav slideshow-nav--next" id="slideshow-next" aria-label="Next image">&rsaquo;</button>
+            <div class="slideshow-dots" id="slideshow-dots"></div>
+            <div class="slideshow-counter" id="slideshow-counter"></div>
+            <div class="slideshow-progress"><div class="slideshow-progress-bar" id="slideshow-progress-bar"></div></div>
+            <div class="swipe-indicator" id="swipe-indicator">&#8592; &#8594;</div>
+          </div>
+          <div class="slideshow-thumbnails" id="slideshow-thumbnails"></div>
+        </div>
+        <div class="department-detail-content-grid">
+          <div class="department-subcategory"><h3>Sandals & Slippers</h3><ul><li>Flip-flops</li><li>Sliders</li><li>Comfort Sandals</li><li>Ethnic Sandals</li></ul></div>
+          <div class="department-subcategory"><h3>School Shoes</h3><ul><li>Black Leather Shoes</li><li>White Canvas Shoes</li><li>Sports Shoes</li></ul></div>
+          <div class="department-subcategory"><h3>Sports Shoes</h3><ul><li>Running Shoes</li><li>Training Shoes</li><li>Casual Sneakers</li></ul></div>
+          <div class="department-subcategory"><h3>Formal Footwear</h3><ul><li>Dress Shoes</li><li>Loafers</li><li>Heels</li></ul></div>
+        </div>
+      </div>
+
+      <!-- Related Departments Section -->
+      <div class="related-departments" id="related-departments">
+        <!-- Content will be injected by script.js -->
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> Sri Rethinagiriswarar Stores. All rights reserved.</p>
+    <p class="footer-credit">SRS <a href="#top">back to top ↑</a></p>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

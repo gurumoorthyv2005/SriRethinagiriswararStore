@@ -56,12 +56,11 @@ body{
     radial-gradient(circle at 85% 70%, hsla(188, 43%, 49%, 0.1), transparent 35%);
   background-attachment: fixed;
 }
-
-/* Re-apply solid background for main content sections over the new body background */
-.hero, .categories, .department-detail, .about, .visit, .site-footer {
+main {
   font-family: var(--body);
   color: var(--charcoal);
   background: var(--paper);
+  overflow-x: hidden; /* Prevents horizontal scroll from animations */
   -webkit-font-smoothing: antialiased;
 }
 h1,h2,h3{ font-family: var(--display); font-weight: 700; letter-spacing: 0.01em; line-height: 1.1; margin: 0; }
@@ -156,11 +155,23 @@ img{ max-width:100%; display:block; }
 /* ============ HERO ============ */
 .hero{
   background-color: var(--ink);
+  --grad-1: hsla(28, 80%, 55%, 0.4);
+  --grad-2: hsla(190, 80%, 45%, 0.3);
+  background-image: 
+    radial-gradient(at 20% 25%, var(--grad-1) 0px, transparent 50%),
+    radial-gradient(at 80% 75%, var(--grad-2) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: heroGradient 15s ease-in-out infinite;
   color: var(--paper);
   padding: 90px 24px 70px;
   display:flex; justify-content:center;
   position: relative;
   overflow: hidden;
+}
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .hero-inner > * {
   opacity: 0;
@@ -235,6 +246,41 @@ img{ max-width:100%; display:block; }
 .filter-btn.is-active{ background: var(--marigold); border-color: var(--marigold); color: var(--ink); }
 [data-theme="dark"] .filter-btn{ border-color: var(--ink-soft); color: var(--charcoal); }
 [data-theme="dark"] .filter-btn.is-active{ color: var(--ink); }
+
+/* ============ SEARCH BAR (NEW) ============ */
+.search-wrapper{
+  max-width: 700px; margin: 0 auto 36px; padding: 0 24px;
+}
+.search-bar{
+  position: relative;
+}
+.search-bar input{
+  width: 100%;
+  padding: 14px 40px 14px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--paper-dim);
+  background: var(--paper-dim);
+  font-family: var(--body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: all .25s ease;
+}
+.search-bar input:focus{
+  outline: none;
+  border-color: var(--marigold);
+  background: var(--paper);
+  box-shadow: 0 0 0 4px rgba(221, 107, 32, 0.1);
+}
+.search-bar #search-clear{
+  position: absolute;
+  right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; font-size: 1.5rem;
+  color: var(--ink-soft); cursor: pointer; opacity: 0;
+  transition: opacity .25s ease;
+}
+.search-bar input:not(:placeholder-shown) + #search-clear{
+  opacity: 0.7;
+}
 
 /* ============ TAG FILTER ANIMATION ============ */
 .tag.tag-hidden{ opacity:0 !important; transform: scale(0.8) translateY(10px) !important; pointer-events:none; position:absolute; visibility:hidden; }
@@ -337,14 +383,15 @@ img{ max-width:100%; display:block; }
 /* ============ DEPARTMENT DETAIL SECTION ============ */
 .department-detail{
   padding: 0; /* Remove padding by default */
-  opacity: 0;
-  /* New: Smoother transition */
-  visibility: hidden;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+  background: var(--paper); /* Ensure it has a solid background */
+  /* The following properties are handled by .is-active when present on page load */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* transform: translateY(30px); */
+  /* transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease; */
 }
 .department-detail.is-active {
-  padding: 40px 0; /* Add padding back when it's visible */
+  padding: 40px 0; /* Add padding when it's visible */
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1078,6 +1125,12 @@ img{ max-width:100%; display:block; }
   padding: 4px 2px 8px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  /* NEW: Glassmorphism for thumbnail strip */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 .slideshow-thumbnails::-webkit-scrollbar{ height: 4px; }
 .slideshow-thumbnails::-webkit-scrollbar-thumb{ background: var(--ink-soft); border-radius: 4px; }
@@ -1222,3 +1275,48 @@ img{ max-width:100%; display:block; }
 a:focus-visible, button:focus-visible{
   outline: 3px solid var(--marigold); outline-offset: 3px;
 }
+
+/* ============================================= */
+/* ===== RELATED DEPARTMENTS (NEW) ===== */
+/* ============================================= */
+.related-departments{
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--paper-dim);
+}
+.related-departments h3{
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.related-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+.related-card{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--paper-dim);
+  transition: all .25s ease;
+}
+.related-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px var(--shadow-hover);
+  background: var(--card-bg);
+}
+.related-card .tag-icon{
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.related-card-info h4{
+  font-family: var(--display);
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.related-card-info p{ font-size: 0.8rem; opacity: 0.7; line-height: 1.4; }
