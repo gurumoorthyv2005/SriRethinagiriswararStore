@@ -233,6 +233,113 @@ if (searchInput) {
   });
 }
 
+// ================================================================
+// ===== 11. DEPARTMENT DETAIL VIEW (Simulated Pages) =====
+// ================================================================
+
+function showDepartmentDetail(departmentId) {
+  const department = departmentData.find(d => d.id === departmentId);
+  if (!department) return;
+
+  const detailSection = document.getElementById('department-detail');
+  const detailInner = document.getElementById('department-detail-inner');
+  const closeBtn = document.getElementById('close-detail-view');
+
+  // Color mapping for banners
+  const colorMap = {
+    'apparel': 'marigold',
+    'food': 'sage',
+    'services': 'plum',
+    'home': 'teal'
+  };
+  const bannerColor = colorMap[department.category] || 'marigold';
+
+  // Build the HTML for the detail view
+  detailInner.innerHTML = `
+    <div class="department-breadcrumb">
+      <a href="#" id="breadcrumb-back">Departments</a>
+      <span>/</span>
+      <span class="breadcrumb-current">${department.name}</span>
+    </div>
+
+    <div class="department-banner banner--${bannerColor}">
+      <p class="eyebrow">Department</p>
+      <h2>${department.name}</h2>
+      <p>${department.description}</p>
+    </div>
+
+    <a href="#" id="detail-back-btn" class="btn btn-ghost department-back-btn">&larr; Back to All Categories</a>
+  
+    <div class="department-detail-grid">
+      <div class="department-images">
+        <!-- Slideshow will be initialized here -->
+        <div class="slideshow-container" id="slideshow-container">
+          <div class="slideshow-track" id="slideshow-track"></div>
+          <button class="slideshow-nav slideshow-nav--prev" id="slideshow-prev" aria-label="Previous image">&lsaquo;</button>
+          <button class="slideshow-nav slideshow-nav--next" id="slideshow-next" aria-label="Next image">&rsaquo;</button>
+          <div class="slideshow-dots" id="slideshow-dots"></div>
+          <div class="slideshow-counter" id="slideshow-counter"></div>
+          <div class="slideshow-progress"><div class="slideshow-progress-bar" id="slideshow-progress-bar"></div></div>
+          <div class="swipe-indicator" id="swipe-indicator">&#8592; &#8594;</div>
+        </div>
+        <div class="slideshow-thumbnails" id="slideshow-thumbnails"></div>
+      </div>
+      <div class="department-detail-content-grid">
+        ${department.subcategories.map(sub => `
+          <div class="department-subcategory">
+            <h3>${sub.name}</h3>
+            <ul>
+              ${sub.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="related-departments" id="related-departments"></div>
+  `;
+
+  // Show the detail section
+  detailSection.classList.add('is-active');
+  closeBtn.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+
+  // Initialize slideshow and related departments
+  initSlideshow(department.images);
+  initRelatedDepartments(department.id, department.category);
+  setupDetailViewEvents(); // Wire up close buttons
+}
+
+function hideDepartmentDetail() {
+  const detailSection = document.getElementById('department-detail');
+  const closeBtn = document.getElementById('close-detail-view');
+  detailSection.classList.remove('is-active');
+  closeBtn.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function setupDetailViewEvents() {
+  // Use event delegation for dynamically added elements
+  const detailSection = document.getElementById('department-detail');
+  detailSection.addEventListener('click', function(e) {
+    if (e.target.matches('#breadcrumb-back, #detail-back-btn')) {
+      e.preventDefault();
+      hideDepartmentDetail();
+    }
+  });
+}
+
+// Add click listeners to department tags
+tags.forEach(tag => {
+  tag.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent navigating to the .html file
+    const departmentId = tag.getAttribute('href').replace('.html', '');
+    showDepartmentDetail(departmentId);
+  });
+});
+
+// Add listener for the main close button
+document.getElementById('close-detail-view').addEventListener('click', hideDepartmentDetail);
 
 // ================================================================
 // ===== 11. DEPARTMENT DETAIL VIEW (Simulated Pages) =====
@@ -422,24 +529,8 @@ const departmentData = [
 
 // ===== PAGE-SPECIFIC INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
-  const isMainPage = document.getElementById('tag-board');
-  const isDeptPage = document.getElementById('slideshow-container');
-
-  if (isMainPage) {
-    // Main page specific scripts
-    if (typewriterLine) typewriterEffect();
-    if (counters.length) initCounters();
-  }
-
-  if (isDeptPage) {
-    // Department page specific scripts
-    const departmentId = document.body.dataset.departmentId;
-    const department = departmentData.find(d => d.id === departmentId);
-    if (department) {
-      initSlideshow(department.images);
-      initRelatedDepartments(department.id, department.category);
-    }
-  }
+  if (typewriterLine) typewriterEffect();
+  if (counters.length) initCounters();
 });
 
 // ================================================================
@@ -523,21 +614,13 @@ function initSlideshow(images) {
   const track = document.getElementById('slideshow-track');
   if (!track) return;
 
-  // REUSE the pre-rendered slides already present in the HTML.
-  // This keeps the working, department-relevant Unsplash images in place
-  // instead of overwriting them with the departmentData Pexels URLs
-  // (some of which were broken/malformed).
-  if (track.querySelector('.slideshow-slide')) {
-    // Keep existing slides as-is and continue setup below.
-  } else {
-    // Fallback: only build slides dynamically if none are pre-rendered.
-    track.innerHTML = (images || []).map((imgSrc, i) => `
-      <div class="slideshow-slide ${i === 0 ? 'is-active' : ''}" data-index="${i}">
-        <img src="${imgSrc}" alt="Department image ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}" class="slideshow-img">
-        <div class="slideshow-caption">Image ${i + 1} of ${images.length}</div>
-      </div>
-    `).join('');
-  }
+  // Dynamically build slides from the data object
+  track.innerHTML = (images || []).map((imgSrc, i) => `
+    <div class="slideshow-slide ${i === 0 ? 'is-active' : ''}" data-index="${i}">
+      <img src="${imgSrc}" alt="Department image ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}" class="slideshow-img">
+      <div class="slideshow-caption">Image ${i + 1} of ${images.length}</div>
+    </div>
+  `).join('');
 
   const slides = track.querySelectorAll('.slideshow-slide');
   if (!slides.length) return;
@@ -640,69 +723,62 @@ function initSlideshow(images) {
 }
 
 // These listeners are set up once on page load for department pages
-if (document.getElementById('slideshow-container')) {
-  const prevBtn = document.getElementById('slideshow-prev');
-  const nextBtn = document.getElementById('slideshow-next');
-  const container = document.getElementById('slideshow-container');
-  const slides = document.querySelectorAll('.slideshow-slide');
-
-  // ===== SWIPE SUPPORT =====
-  if (container) {
-    let startX = 0;
-    let isSwiping = false;
-
-    container.addEventListener('touchstart', (e) => {
-      startX = e.changedTouches[0].screenX;
-      isSwiping = true;
-    }, { passive: true });
-
-    container.addEventListener('touchmove', (e) => {
-      if (!isSwiping) return;
-      // Prevent default to avoid page scroll while swiping
-      // but only if horizontal movement is significant
-      const diff = Math.abs(e.changedTouches[0].screenX - startX);
-      if (diff > 10) {
-        e.preventDefault();
-      }
-    }, { passive: false });
-
-    container.addEventListener('touchend', (e) => {
-      if (!isSwiping) return;
-      isSwiping = false;
-      const endX = e.changedTouches[0].screenX;
-      const diff = startX - endX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          goToSlide(slideshowState.currentIndex + 1, slides);
-        } else {
-          goToSlide(slideshowState.currentIndex - 1, slides);
-        }
-      }
-    }, { passive: true });
-
-    // Hover pause / resume autoplay
-    container.addEventListener('mouseenter', () => {
-      pauseAutoplay();
-    });
-    container.addEventListener('mouseleave', () => {
-      startAutoplay();
-    });
+// Use event delegation on the detail section for swipe/nav events
+document.getElementById('department-detail').addEventListener('click', function(e) {
+  if (e.target.matches('#slideshow-prev')) {
+    e.stopPropagation();
+    goToSlide(slideshowState.currentIndex - 1);
   }
-
-  // Set up navigation buttons
-  if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goToSlide(slideshowState.currentIndex - 1);
-    });
+  if (e.target.matches('#slideshow-next')) {
+    e.stopPropagation();
+    goToSlide(slideshowState.currentIndex + 1);
   }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
+});
+
+let startX = 0;
+let isSwiping = false;
+
+document.getElementById('department-detail').addEventListener('touchstart', (e) => {
+  if (e.target.closest('#slideshow-container')) {
+    startX = e.changedTouches[0].screenX;
+    isSwiping = true;
+  }
+}, { passive: true });
+
+document.getElementById('department-detail').addEventListener('touchmove', (e) => {
+  if (!isSwiping) return;
+  const diff = Math.abs(e.changedTouches[0].screenX - startX);
+  if (diff > 10) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+document.getElementById('department-detail').addEventListener('touchend', (e) => {
+  if (!isSwiping) return;
+  isSwiping = false;
+  const endX = e.changedTouches[0].screenX;
+  const diff = startX - endX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
       goToSlide(slideshowState.currentIndex + 1);
-    });
+    } else {
+      goToSlide(slideshowState.currentIndex - 1);
+    }
   }
-}
+}, { passive: true });
+
+document.getElementById('department-detail').addEventListener('mouseover', e => {
+  if (e.target.closest('#slideshow-container')) {
+    pauseAutoplay();
+  }
+});
+
+document.getElementById('department-detail').addEventListener('mouseout', e => {
+  if (e.target.closest('#slideshow-container')) {
+    startAutoplay();
+  }
+});
+
 function goToSlide(index, slides) {
   // Auto-fetch slides from the DOM if not provided (fixes prev/next buttons).
   if (!slides || !slides.length) {

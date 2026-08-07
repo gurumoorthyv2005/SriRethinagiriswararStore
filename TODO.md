@@ -1,29 +1,19 @@
-# Slideshow Fix — Completed
+# Task: Replace external image URLs with local Img/ folder images
 
-## Root Cause 1: Slideshow not working (auto/manual)
-On department pages, the top-level `typewriterEffect()` call referenced `#typewriter-line`,
-which only exists on the main `index.html`. This threw a `TypeError` on department pages,
-halting `script.js` before the `DOMContentLoaded` handler registered, so `initSlideshow()`
-never ran. Result: no auto-play, no manual navigation, no dots/thumbnails, and the images
-appeared inconsistent.
+## Problem
+Department HTML pages reference external Unsplash/Pexels image URLs that don't display.
+Replaced with local images in the `Img/` folder.
 
-**Fix (script.js):**
-- Guarded `typewriterEffect()` so it only runs when `#typewriter-line` exists (main page only).
-- Added a null-guard inside the function body for safety.
+## Steps
+- [x] clothing.html → Img/clothing/ (cloth1–cloth6)
+- [x] grocery.html → Img/Grocery/ (grocery1–grocery6)
+- [x] xerox-printing.html → Img/Xerox%20and%20printing/ (xerox1–xerox6)
+- [x] gifts.html → Img/Gifts/ (Gift1, Gifts2, Gift3, Gift4, Gifts5, Gift6)
+- [x] footwear.html → Img/footwear/ (foot1–foot6)
+- [x] stationery.html → Img/Stationary/ (stationary1, Stationery2, Stationary3, statinary4, stationary5, stationary6)
+- [x] cool-drinks.html → Img/Cooldrinks/ (Cool1, cool2–cool6)
+- [x] daily-home-needs.html → Img/HomeNeeds/ (hn1–hn6)
+- [x] fancy-items.html → Img/Fancy/ (fancy1–fancy5, facncy6)
 
-## Root Cause 2: Images differ / "Image unavailable"
-17 Unsplash URLs and several Pexels URLs returned HTTP 404 (broken), causing the graceful
-fallback SVG "Image unavailable" placeholder to appear.
-
-**Fix (all 9 department HTML files):**
-- Replaced all broken (404) slide image URLs with verified working Pexels URLs (HTTP 200 confirmed).
-- Verified all 53 unique image URLs across all department pages return HTTP 200.
-
-## Result
-✅ Every department slideshow now initializes correctly with auto-play, manual prev/next,
-   dots, thumbnails, swipe, counter, and lightbox.
-✅ All images load correctly on every department page (0 broken images).
-
-## Branch
-- Branch: `blackboxai/fix-department-slideshow` (pushed to origin)
-- Local preview: `python -m http.server 8000` → http://localhost:8000
+## Verification
+- [x] All images point to local Img/ folder paths (0 missing files)

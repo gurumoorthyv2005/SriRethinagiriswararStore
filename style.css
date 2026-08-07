@@ -382,13 +382,15 @@ img{ max-width:100%; display:block; }
 
 /* ============ DEPARTMENT DETAIL SECTION ============ */
 .department-detail{
-  padding: 0; /* Remove padding by default */
-  background: var(--paper); /* Ensure it has a solid background */
-  /* The following properties are handled by .is-active when present on page load */
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* transform: translateY(30px); */
-  /* transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease; */
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--paper);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  overflow-y: auto;
 }
 .department-detail.is-active {
   padding: 40px 0; /* Add padding when it's visible */
@@ -397,7 +399,7 @@ img{ max-width:100%; display:block; }
   transform: translateY(0);
 }
 .department-detail-inner{
-  max-width: 1280px; margin:0 auto; padding: 0 24px;
+  max-width: 1280px; margin:0 auto; padding: 40px 24px;
 }
 .department-back-btn{
   margin-bottom: 40px;
@@ -793,6 +795,9 @@ img{ max-width:100%; display:block; }
   }
   .department-detail-grid{ grid-template-columns: 1fr; gap: 40px; }
   .hero{ padding: 70px 20px 50px; }
+}
+@media (max-width: 720px) {
+  .hero { justify-content: center !important; text-align: center; }
 }
 
 /* ============================================= */
